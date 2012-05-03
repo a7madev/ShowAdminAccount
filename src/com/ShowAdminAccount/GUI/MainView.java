@@ -1,13 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * MainView.java
- *
- * Created on Dec 3, 2011, 9:10:18 PM
- */
 package com.ShowAdminAccount.GUI;
 
 import com.com.A7madY911.ShowAdminAccount.Cmds.batchCmd;
@@ -22,8 +12,8 @@ import java.util.logging.Logger;
  *
  * @author A7madY911
  */
-public class MainView extends javax.swing.JFrame {
 
+public class MainView extends javax.swing.JFrame {
 
     /** Creates new form MainView */
     public MainView() {
@@ -41,17 +31,10 @@ public class MainView extends javax.swing.JFrame {
         
         Image icon = Toolkit.getDefaultToolkit().getImage("Admin.png");
         this.setIconImage(icon);
-        
-        
 
- 
-        
     }
     
     batchCmd cmdObj = new batchCmd();
-    
-    
-    
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -87,8 +70,8 @@ public class MainView extends javax.swing.JFrame {
             }
         });
 
-        DevNameLabel.setFont(new java.awt.Font("Tahoma", 0, 10));
-        DevNameLabel.setText("Developed by uxcod3v");
+        DevNameLabel.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        DevNameLabel.setText("by A7madY911");
         DevNameLabel.setToolTipText("");
         DevNameLabel.setEnabled(false);
 
@@ -99,17 +82,19 @@ public class MainView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(DevNameLabel)
-                    .addComponent(ShowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ShowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(HideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(23, 23, 23))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addComponent(receivedImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(53, 53, 53))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DevNameLabel)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,8 +103,8 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(receivedImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ShowButton, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                    .addComponent(HideButton, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
+                    .addComponent(ShowButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(HideButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DevNameLabel)
                 .addContainerGap())

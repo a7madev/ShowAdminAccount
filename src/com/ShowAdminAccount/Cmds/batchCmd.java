@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.ShowAdminAccount.Cmds;
 
 import java.awt.Desktop;
@@ -118,7 +113,6 @@ public class batchCmd {
             }
            
         } catch (Exception ex) {
-            
             
         }
     }
