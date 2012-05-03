@@ -1,6 +1,6 @@
 package com.ShowAdminAccount.GUI;
 
-import com.com.A7madY911.ShowAdminAccount.Cmds.batchCmd;
+import com.ShowAdminAccount.Cmds.batchCmd;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
