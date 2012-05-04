@@ -51,8 +51,9 @@ public class MainView extends javax.swing.JFrame {
         receivedImageLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Show Admin Account");
+        setTitle("ShowAdminAccount");
         setIconImages(null);
+        setName("MainView");
         setResizable(false);
 
         HideButton.setText("Hide");
@@ -71,9 +72,15 @@ public class MainView extends javax.swing.JFrame {
         });
 
         DevNameLabel.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        DevNameLabel.setText("by A7madY911");
+        DevNameLabel.setText("By A7madY911");
         DevNameLabel.setToolTipText("");
+        DevNameLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DevNameLabel.setEnabled(false);
+        DevNameLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DevNameLabelMouseClicked(evt);
+            }
+        });
 
         receivedImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ShowAdminAccount/GUI/Admin.png"))); // NOI18N
 
@@ -83,21 +90,18 @@ public class MainView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DevNameLabel)
-                        .addContainerGap(159, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(ShowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(HideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(receivedImageLabel)
-                                .addGap(53, 53, 53))))))
+                .addComponent(DevNameLabel)
+                .addContainerGap(165, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(receivedImageLabel)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(ShowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(HideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,6 +137,15 @@ public class MainView extends javax.swing.JFrame {
             Logger.getLogger(MainView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_HideButtonMouseClicked
+
+    private void DevNameLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DevNameLabelMouseClicked
+        String DevURL = "https://github.com/A7madY911";
+        try {
+            Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + DevURL);
+        } catch (IOException ex) {
+            Logger.getLogger(MainView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_DevNameLabelMouseClicked
 
     /**
      * @param args the command line arguments
