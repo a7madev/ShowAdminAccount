@@ -16,7 +16,7 @@ public class batchCmd {
     File tmpf = new File("batch.bat");
     File cmdFilePath = new File("C:\\Windows\\System32\\cmd.exe");
     
-    //Show Commands for Windows 7
+    //Show Commands for Windows
     public void ShowBatchCmdWin7() throws IOException{
         
         if(cmdFilePath.exists()){
@@ -41,7 +41,7 @@ public class batchCmd {
     
     }
     
-    //Hide Commands for Windows 7
+    //Hide Commands for Windows
     public void HideBatchCmdWin7() throws IOException{
 
             if(cmdFilePath.exists()){
@@ -85,15 +85,16 @@ public class batchCmd {
         JOptionPane.showMessageDialog(null,"Done!");
     }
     
-	//Delete if file exists and create it again
+    //Delete if file exists and create it again
     public void delThenCreateFile() throws IOException{
         if(tmpf.exists()){
             tmpf.delete();
         }
         tmpf.createNewFile();
+        Runtime.getRuntime().exec("attrib +H " + tmpf); //hide batch file
     }
     
-	//execute the file
+    //execute the file
     public void execFile() throws IOException{
         try {
 
